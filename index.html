@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eswar's Browser</title>
+
+    <link
+      rel="shortcut icon"
+      href="assets/img/navbar/logo.png"
+      type="image/x-icon"
+    />
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <video
+      autoplay
+      loop
+      muted
+      poster="./assets/img/body/ostrichMan1.gif"
+    ></video>
+
+    <div class="navbar">
+      <img src="assets/img/navbar/logo.png" alt="Logo" />
+
+      <div>
+        <a href="https://github.com/"
+          ><img src="assets/img/navbar/github.png" class="github" alt="github"
+        /></a>
+        <a href="https://leetcode.com/problems/"
+          ><img
+            src="assets/img/navbar/leetcode.png"
+            class="leetcode"
+            alt="leetcode"
+        /></a>
+        <img src="assets/img/navbar/user.jpg" class="user" alt="user" />
+      </div>
+    </div>
+
+    <div class="searchBar">
+      <h1>
+        Good <span id="greeting"></span>, <span id="searchName">Eswar</span>
+      </h1>
+
+      <div class="micSetting">
+        <input type="text" id="searchInput" x-webkit-speech />
+        <img src="assets/img/searchbar/mic.png" alt="Mic" />
+      </div>
+    </div>
+
+    <div class="recents" id="recentsDiv"></div>
+  </body>
+  <script src="assets/js/script.js"></script>
+</html>

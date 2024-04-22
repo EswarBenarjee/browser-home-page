@@ -1,0 +1,200 @@
+/* Loading fonts  */
+@font-face {
+  font-family: Montsterrat;
+  src: url("../fonts/Montserrat/Montserrat-VariableFont_wght.ttf")
+    format("opentype");
+}
+
+body {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  font-family: "Montsterrat";
+}
+
+/* Background */
+body > video {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 15vw;
+  animation: moveRight 7s linear infinite;
+}
+
+/* Navbar  */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar img {
+  width: 80px;
+  height: 80px;
+  margin: 0 20px;
+}
+
+.navbar div {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbar .github {
+  height: 30px;
+  width: 30px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+.navbar .leetcode {
+  height: 30px;
+  width: 25px;
+}
+.navbar .user {
+  border-radius: 50%;
+  height: 35px;
+  width: 35px;
+}
+
+/* Search Box */
+.searchBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 50px;
+}
+.searchBar h1 {
+  color: #fff;
+  font-size: 3rem;
+  position: relative;
+  animation: moveDown 0.5s ease-in-out;
+}
+.searchBar #searchName {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(45deg, rgb(0, 255, 255), rgb(255, 127, 0));
+}
+
+.searchBar .micSetting {
+  position: relative;
+  animation: zoom 1s ease-in-out;
+}
+
+.searchBar input {
+  width: 600px;
+  height: 50px;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  padding: 0 20px;
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
+.searchBar input:hover,
+.searchBar input:active,
+.searchBar input:focus {
+  box-shadow: 0 0 10px 0 #fff;
+}
+
+.searchBar .micSetting img {
+  background: "";
+  position: absolute;
+  margin-top: 20px;
+  bottom: 0;
+  right: 20px;
+  width: 40px;
+}
+
+/* Recents */
+.recents {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  transition: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.recents .card {
+  background: #fff;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.4) 0%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  border-radius: 20px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  margin-left: 30px;
+  margin-right: 30px;
+  padding: 20px;
+  width: 3.5%;
+  position: relative;
+  text-decoration: none;
+}
+.recents .card img {
+  width: 100%;
+}
+.recents .card h6 {
+  text-align: center;
+  color: #fff;
+  margin: 0;
+  margin-top: 5px;
+}
+
+.recents .card:nth-child(1) {
+  animation: moveUp 0.3s ease-in-out;
+}
+.recents .card:nth-child(2) {
+  animation: moveUp 0.6s ease-in-out;
+}
+.recents .card:nth-child(3) {
+  animation: moveUp 0.9s ease-in-out;
+}
+.recents .card:nth-child(4) {
+  animation: moveUp 1.2s ease-in-out;
+}
+.recents .card:nth-child(5) {
+  animation: moveUp 1.5s ease-in-out;
+}
+
+/* Keyframes */
+@keyframes moveRight {
+  0% {
+    left: -15vw;
+  }
+  100% {
+    left: 100vw;
+  }
+}
+@keyframes moveDown {
+  0% {
+    bottom: 100px;
+    opacity: 0;
+  }
+  100% {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+@keyframes zoom {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes moveUp {
+  0% {
+    top: 50px;
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}
